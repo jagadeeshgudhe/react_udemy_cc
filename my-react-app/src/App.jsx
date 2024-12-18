@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export function MainGoal() {
+  return <p>My main goal: Learn React in great detail.</p>;
 }
 
-export default App
+// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
+// Except for outputting your custom component
+
+function App() {
+  return (
+    <div id="app">
+      <h1>Time to Practice!</h1>
+      <p>
+        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
+        text.
+      </p>
+      <p>
+        Your <code>&lt;MainGoal&gt;</code> component should simply output some
+        text that describes your main course goal (e.g., &quot;My main goal:
+        Learn React in great detail&quot;).
+      </p>
+      <p>
+        <strong>Important:</strong> You custom component must contain the text
+        &quot;My main goal:&quot;
+      </p>
+      <p>
+        <strong>Also important:</strong> For the automatic checks to succeed,
+        you <strong>must export</strong> your custom component function! Not as
+        a default but simply by adding the <code>export</code> keyword in front
+        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
+        ).
+      </p>
+      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
+      {/* OUTPUT YOUR COMPONENT HERE */}
+      <MainGoal />
+    </div>
+  );
+}
+
+export default App;
